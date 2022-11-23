@@ -17,7 +17,7 @@ def tonpy_sound():
 
     GPIO.cleanup()
 
-def snooz_alery():
+def function():
 
     #カメラを起動
     cap = cv2.VideoCapture(0)
@@ -93,4 +93,4 @@ def snooz_alery():
 
 if __name__ == "__main__":
 
-    snooz_alery()
+    function()
