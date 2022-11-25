@@ -1,4 +1,6 @@
 ## Raspberrypiを使って、いびきを予防する作品を作ってみた
+
+<img src="https://user-images.githubusercontent.com/117970552/203920740-0466a280-94ab-432c-865d-ec8db3b8e0a0.jpg" width="60%">
 ### 目的
 家族のいびきがうるさくて眠れない日々…
 いびきは仰向けで寝ると舌が喉の奥に下がり気道が圧迫され、かきやすくなります。
