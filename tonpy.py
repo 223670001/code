@@ -19,18 +19,16 @@ def tonpy_sound():
 
 def function():
 
-    #カメラを起動
+    #赤外線カメラを起動
     cap = cv2.VideoCapture(0)
 
-    #始まりの時間を指定
+    #開始時間を指定
     start_time = time.time()
 
     while True:
 
-        #カスケードファイルを準備
         cascade_file = "haarcascade_frontalface_default.xml"
 
-        #カスケードファイルを読み込む
         cascade = cv2.CascadeClassifier(cascade_file)
 
         #1フレームずつ取得する
@@ -39,14 +37,13 @@ def function():
         #左右を反転する
         frame = cv2.flip(frame, 1)
 
-        #取得できない場合は終了
         if not ret:
             break
 
-        #画像を縮小
+        #画像の大きさを変更
         frame = cv2.resize(frame, (500, 500))
 
-        #グレイスケールに変換
+        #モノクロにする
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         #顔認識を実行
@@ -60,13 +57,13 @@ def function():
             #赤色の枠で囲む
             cv2.rectangle(frame, (x,y), (x+w,y+h),red, 1)
 
-        #顔を検出した時，
+        #顔を検出した時
         if len(face_list) > 0:
 
             #経過時間を指定する
             end_time = time.time()
 
-            #始まりの時間から経過時間を表示する
+            #経過時間を画面に表示する
             print(end_time-start_time)
 
             #3秒経過したら，
